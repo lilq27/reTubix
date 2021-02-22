@@ -46,7 +46,8 @@ iframe {
     max-width: 100%;  */
     height: auto;
 }
-#cslide{
+
+.container-fluid.cslide{
         
     /* max-width: 100%;
     position: relative; */

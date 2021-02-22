@@ -4,17 +4,20 @@ package com.reTubix.main.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.reTubix.login.domain.MemberVO;
+import com.reTubix.main.domain.NaverApiDto;
 import com.reTubix.main.domain.Trailer_ViewVO;
 
-@Service
+
 public interface MainService {
 
+	public List<NaverApiDto> naverApi(String movieName);
+	
 	public List<MemberVO> subscribeList(String email);
 	
 	public List<Trailer_ViewVO> mainTrailer();
+	
+	public List<Trailer_ViewVO> MovieList(String KeyWord);
 	
 	public List<Trailer_ViewVO> SF_Movie();
 	

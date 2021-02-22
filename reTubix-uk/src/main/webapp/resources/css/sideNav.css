@@ -174,7 +174,7 @@
     text-overflow: ellipsis;
 }
 
-.subscribe li a span img{
+.subscribe li a img{
     /* 우측정렬 */          float: left;
     /* 메뉴 텍스트와 간격 */ margin-right: 0.5em;
     margin-top: 0.1em;
@@ -186,7 +186,7 @@
 
 /* 하단 메뉴=============================== */
 /* 포인트 충전 버튼 스타일 */
-.sideNavMenu ul button {
+.sideNavMenu button {
     float: left;
     width: 88%;
     height: 3em;

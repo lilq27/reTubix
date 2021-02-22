@@ -21,6 +21,13 @@
 		10
 	</select>
 
+	<select id="MovieList" resultType="TrailerView" parameterType="string">
+		SELECT title, idx 
+		  FROM trailer_view 
+		 WHERE idx 
+		  LIKE '%' || #{keyWord} || '%'
+	</select>
+
 	<select id="SF_Movie" resultType="TrailerView">
 		select title,idx from
 		trailer_view where idx like '%MS%'

@@ -27,7 +27,8 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:config/mybatis-config.xml"></property>
-		<property name="mapperLocations" value="classpath:com/reTubix/**/*.xml"></property>	
+		<property name="mapperLocations" value="classpath*:com/reTubix/**/**/*.xml"></property>
+<!-- 		classpath: 접두사는 접두사 이후의 경로를 src와 resources 순으로 찾음 -->
 	</bean>
 	
 	 <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
@@ -39,7 +40,7 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<context:component-scan base-package="com.reTubix.*"></context:component-scan>
-	<mybatis-spring:scan base-package="com.reTubix.*"/>
+	<context:component-scan base-package="com.reTubix.*.contorller"></context:component-scan>
+	<mybatis-spring:scan base-package="com.reTubix.*.mapper"/>
 
 </beans>

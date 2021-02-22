@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,10 +30,11 @@ public class LoginController {
 	@Autowired	
 	private CommonUtil util;
 	
-	@Autowired		
+	@Autowired
 	private UserService userService;
 	
 	@Autowired
+//	@Qualifier("mainservice")//중복될 때 지정해줌 
 	private MainService mainservice;
 
 	/**로그인 화면 진입: "localhost:9090/reTubix/"*/
@@ -59,7 +61,7 @@ public class LoginController {
 		}
 		
 		/*로직처리: 로그인 인증처리 메소드 호출*/
-		MemberVO loginUser=userService.isLoginOk(email, pwd);
+		MemberVO loginUser = userService.isLoginOk(email, pwd);
 		if(loginUser!=null) {
 			ses.setAttribute("email", email);
 			ses.setAttribute("loginUser", loginUser);

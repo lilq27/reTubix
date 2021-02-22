@@ -11,6 +11,8 @@ public interface MainMapper {
 	
 	public List<Trailer_ViewVO> mainTrailer();
 	
+	public List<Trailer_ViewVO> MovieList(String KeyWord);
+	
 	public List<Trailer_ViewVO> SF_Movie();
 	
 	public List<Trailer_ViewVO> CO_Movie();

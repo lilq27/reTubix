@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
+	<context:component-scan base-package="com"/> <!-- @어노테이션 -->
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
@@ -21,8 +21,17 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.reTubix"/> <!-- @어노테이션 -->
-	
-	
+	<!-- Interceptor 설정(=맵핑) -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/user/**" />
+			<mapping path="/admin/**" />
+			<beans:bean class="com.reTubix.login.temp.LoginCheckInterceptor" />
+		</interceptor>
+		<interceptor>
+			<mapping path="/admin/**" />
+			<beans:bean class="com.reTubix.login.temp.AdminCheckInterceptor" />
+		</interceptor>
+	</interceptors>
 	
 </beans:beans>

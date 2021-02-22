@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.reTubix.login.domain.MemberVO;
 import com.reTubix.login.mapper.UserRegMapper;
 
-@Service(value = "UserReg")
+@Service
 public class UserRegServiceImpl implements UserRegService {
 
 	@Inject
