@@ -14,7 +14,7 @@
 	
 	<!-- lightslider============== -->
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/lightslider.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+<%-- 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/main.js"></script> --%>
 	
 </body>
 </html>

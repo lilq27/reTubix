@@ -48,12 +48,12 @@
 				<div class="row">
 					<ul id="content-slider" class="content-slider">
 					<c:forEach var="zzimList" items="${zzimListTitle}" begin="0" end="20" step="1">
-						<div class="col-6 col-lg-2 animate-in-down">
+						<li class="col-6 col-lg-2 animate-in-down">
 							<a href="user/showMovie?idx=${zzimList.idx}"> 
 								<img src="${pageContext.request.contextPath}/resources/images/poster/${zzimList.title}.png"
 								class="center-block img-fluid my-3" height="230px" width="158px">
 							</a>
-						</div>
+						</li>
 					</c:forEach>
 					</ul>
 				</div>
@@ -66,34 +66,28 @@
 				<div class="row">
 					<ul id="content-slider" class="content-slider">
 					<c:forEach var="reList" items="${reListTitle}" begin="0" end="20" step="1">
-						<div class="col-6 col-lg-2 animate-in-down">
+						<li class="col-6 col-lg-2 animate-in-down">
 							<a href="user/showMovie?idx=${reList.idx}"> 
 								<img src="${pageContext.request.contextPath}/resources/images/poster/${reList.title}.png"
 								class="center-block img-fluid my-3" height="230px"width="158px">
 							</a>
-						</div>
+						</li>
 					</c:forEach>
 					</ul>
 				</div>
 		</c:if>
 	</div>
 
-	<c:forEach var="i" begin="0" end="5" step="1">
+
 	<div class="container-fluid cslide" id="">
 		<h3 align="left" style="color: lavender">코미디 영화2</h3>
 		<div class="row">
-		<c:forEach var="MOVIE" varStatus="j" items="${MS_title}" begin="0" end="20" step="1">
-			<ul id="" class="content-slider">
-				<li class="col-6 col-lg-2 animate-in-down">
-					<input class="movieTitle" type="hidden" data-title="${MOVIE.title}" value="${MOVIE.title}">
-					<a id="MovieTitle_1" href="user/showMovie?idx=${MOVIE.idx}">
-					</a>
-				</li>
+			<ul id="MovieTitle_1" class="content-slider">
 			</ul>
-		</c:forEach>
 		</div>
 	</div>
-	</c:forEach>
+	
+	
 </section>
 <jsp:include page="../foot.jsp"></jsp:include>
 </body>
